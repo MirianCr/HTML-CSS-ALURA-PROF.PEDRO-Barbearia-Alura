@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+		<title>Contato</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+        <main>
+            <form><!--captar informações do usuario-->
+                    <label for="nomeSobrenome"> Nome e sobrenome </label><!--label for: etiqueta para o input
+                    Isso é especialmente útil para uso com caixas de seleção e botões, pois significa que você pode 
+                    marcar a caixa clicando no texto associado em vez de ter que bater na própria caixa.-->
+                    <input type="text" id="nomeSobrenome" class="input-padrao" required><!--required preenchimento obrigatorio-->
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx)xxxx xxxx">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea cols="70" rows="10" id="mensagem" class="input-padrao"required></textarea> <!--cols(largura) = colunas - rowns(altura)=linhas-->
+                    <br>
+                    <!--selecionar uma opção-->
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend><!--legend e titulo-->
+
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> 
+                    Email</label><!--radio são as bolinhas pra marcar-->
+                    
+                    <label for = "radio-telefone"><input type="radio" name = "contato" value="telefone" id="radio-telefone">
+                    Telefone</label>
+
+                    <label for = "radio-whatsapp"><input type="radio" name = "contato" value="whatsapp" id="radio-whatsapp" checked>
+                    Whatsapp</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Qual horário você prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                 <!--adicionar input dentro do label-->
+                 <!-- elementos do tipo checkboxsão renderizados por padrão como caixas 
+                    quadradas que são marcadas (com uma marca de verificação) quando ativadas-->
+                <label class = "checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?
+                </label>
+                
+                <input type="submit" value="Enviar formulario" class="enviar"><!--botao enviar
+                value muda o nome padrao enviar-->
+
+                    <!-- quando eu clico <radio>ele me deixa marcar mais de uma opção, ou seja,
+                        todos de uma vez, para alterar isso, para manter so um marcado
+                        coloca todos na configuracao de um clica o outro desclica. Eu coloco os 
+                        3 radios em name
+                        A propriedade name só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono 
+                        um dos itens, ele desmarca o outro, mantendo somente um selecionado.-->
+            </form>
+            <table>
+                <thead>
+                    <tr><!--<tr> para marcar uma linha de uma tabela.-->
+                        <td>Dia</td> <!--<td> para marcar uma coluna de uma tabela.-->
+                        <td>Horário</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda-F</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-F</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-F</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <!--para uma unica linha<tr>
+                        <td colspan="5">Rio de Janeiro</td> 
+                    </tr>-->
+                </tbody>
+            </table>
+        </main>
+        <footer>
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
+		</footer>
+	</body>
+</html>
